@@ -15,8 +15,8 @@
 ### 2. Web Page 설명
 
 <div>
-<img width="100" src="https://user-images.githubusercontent.com/33650011/46063691-88e25180-c1a8-11e8-8861-a190a1f1a8aa.png"/>
-<img width="100" src="https://user-images.githubusercontent.com/33650011/46063603-491b6a00-c1a8-11e8-9b2e-c7409416ce83.png"/>
+<img width="200" height="400" src="https://user-images.githubusercontent.com/33650011/46063691-88e25180-c1a8-11e8-8861-a190a1f1a8aa.png"/>
+<img width="200" height="400" src="https://user-images.githubusercontent.com/33650011/46063603-491b6a00-c1a8-11e8-9b2e-c7409416ce83.png"/>
 </div>
 
 <br/><br/>
