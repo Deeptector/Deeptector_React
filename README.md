@@ -1,5 +1,5 @@
 # DeepTector
-######  DeepTector는 실시간 행동 분류기 입니다. 이 repository는 안드로이드에 화면을 띄울 Web Page에 대한 내용입니다.
+#####  DeepTector는 실시간 행동 분류기 입니다. 이 repository는 안드로이드에 화면을 띄울 Web Page에 대한 내용입니다.
 <br/><br/>
 ## 사용 방법
 
