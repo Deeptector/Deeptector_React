@@ -8,11 +8,12 @@ import right from './img/right.png';
 
 
 class List extends Component{
-        
+    //생성자에서 필요한 state 선언과 함수 binding
     constructor(props){
         super(props);
         this.state = {
             input : 0,
+            file : '',
             index : 0,
             pagerMap : new Map(),
             pagedItems : [],
@@ -26,10 +27,11 @@ class List extends Component{
     }
     
    
-
+    //Rendering이 끝난 후 Spring Sever에서 동영상 목록 받아옴
     componentWillMount() {
         this.getListAtSpring();
     }
+    //화면 Renderng
     render() {
         return (
             <div>
@@ -61,9 +63,9 @@ class List extends Component{
         );
     }
 
-
+    //Spring Server에 /getList 요청 보내기
     getListAtSpring = () => {
-        axios.get('http://192.168.0.6:8080/getList')
+        axios.get('http://localhost:8080/getList')
           .then(response => { this.setState({ input : response.data })
                let pager = this.pagerService.getPager(this.state.input.length, 1, 8);
                this.pagerMapSetting(pager);
@@ -71,13 +73,14 @@ class List extends Component{
                })
           .catch(response => {console.log(response);});
         }
-
-        pagerMapSetting(pager) {
+    //페이징을 위한 Map 설정
+    pagerMapSetting(pager) {
             this.state.pagerMap.set("currentPage", pager[0]);
             this.state.pagerMap.set("startIndex", pager[1]);
             this.state.pagerMap.set("endIndex", pager[2]);
-        }    
-        
+    }    
+    
+    //Spring Server에 동영상 다운로드 요청 보내기
     andAtSpring = (data) => {
         let videoName = data;
         axios.post('http://192.168.0.6:8080/and',{videoName :  videoName})
@@ -85,6 +88,7 @@ class List extends Component{
         .catch(response => {console.log(response)})
     }
 
+    //사용자가 화살표를 눌렀을 때 다음 혹은 이전 페이지 나타내는 함수
     setPage = (currentPage) => {
         let pager = this.pagerService.getPager(this.state.input.length, currentPage, 8);
         this.pagerMapSetting(pager);

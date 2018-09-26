@@ -8,7 +8,6 @@ class App extends Component {
       <div>
         <Route exact path="/" component={Home}/>
         <Route exact path="/List" component={List}/>
-        <Route exact path="/viewCCTV" component={viewCCTV}/>
       </div>
     );
   }
