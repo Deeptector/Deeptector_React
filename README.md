@@ -35,3 +35,4 @@
 - <a href="https://github.com/Deeptector/Deeptector">Deeptector</a>
 - <a href="https://github.com/Deeptector/Deeptector_Client_Android">Deeptector_Client_Android</a>
 - <a href="https://github.com/Deeptector/Darknet">DarkNet</a>
+- <a href="https://github.com/Deeptector/Deeptector_Spring">Deeptector_Spring</a>
