@@ -13,7 +13,6 @@ class List extends Component{
         super(props);
         this.state = {
             input : 0,
-            file : '',
             index : 0,
             pagerMap : new Map(),
             pagedItems : [],
@@ -74,15 +73,9 @@ class List extends Component{
         }
 
         pagerMapSetting(pager) {
-            this.state.pagerMap.set("totalItems", pager[0]);
-            this.state.pagerMap.set("currentPage", pager[1]);
-            this.state.pagerMap.set("pageSize", pager[2]);
-            this.state.pagerMap.set("totalPages", pager[3]);
-            this.state.pagerMap.set("startPage", pager[4]);
-            this.state.pagerMap.set("endPage", pager[5]);
-            this.state.pagerMap.set("startIndex", pager[6]);
-            this.state.pagerMap.set("endIndex", pager[7]);
-            this.state.pagerMap.set("pages", pager[8]);
+            this.state.pagerMap.set("currentPage", pager[0]);
+            this.state.pagerMap.set("startIndex", pager[1]);
+            this.state.pagerMap.set("endIndex", pager[2]);
         }    
         
     andAtSpring = (data) => {
