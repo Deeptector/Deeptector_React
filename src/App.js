@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import { Home, List, viewCCTV } from './export'
+import { Home, List } from './export'
 
 class App extends Component {
   render() {
