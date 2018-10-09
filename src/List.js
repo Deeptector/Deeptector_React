@@ -83,7 +83,7 @@ class List extends Component{
     //Spring Server에 동영상 다운로드 요청 보내기
     andAtSpring = (data) => {
         let videoName = data;
-        axios.post('http://192.168.0.6:8080/and',{videoName :  videoName})
+        axios.post('http://localhost:8080/and',{videoName :  videoName})
         .then(response => {console.log(response.data);})
         .catch(response => {console.log(response)})
     }
